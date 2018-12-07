@@ -43,4 +43,7 @@ ingot:
       permit:
        - /login
        - /token
-       - /**
+       - /movie/**
+       - /live/**
+       - /detail/**
+
