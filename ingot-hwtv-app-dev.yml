@@ -46,4 +46,5 @@ ingot:
        - /movie/**
        - /live/**
        - /detail/**
+       - /main/**
 
