@@ -108,3 +108,4 @@ ingot:
         - /hwadmin/login
         - /hwapp/**
         - /ac/auth/admin/login
+        - /ac/oauth/token
