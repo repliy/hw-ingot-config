@@ -41,10 +41,4 @@ ingot:
   oauth2:
     resource:
       permit:
-       - /login
-       - /token
-       - /movie/**
-       - /live/**
-       - /detail/**
-       - /main/**
 
