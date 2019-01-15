@@ -46,10 +46,12 @@ ingot:
         - /live/**
         - /movie/**
         - /main/**
+        - /resource/**
       userPermit:
         - /update/**
         - /detail/**
         - /live/**
         - /movie/**
         - /main/**
+        - /resource/**
 
