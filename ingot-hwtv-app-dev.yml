@@ -41,4 +41,15 @@ ingot:
   oauth2:
     resource:
       permit:
+        - /update/**
+        - /detail/**
+        - /live/**
+        - /movie/**
+        - /main/**
+      userPermit:
+        - /update/**
+        - /detail/**
+        - /live/**
+        - /movie/**
+        - /main/**
 
