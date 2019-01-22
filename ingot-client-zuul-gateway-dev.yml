@@ -105,6 +105,8 @@ ingot:
         - /ac/auth/user/refreshToken
         - /ac/auth/code/**
         - /ac/auth/login
+        - /hwapp/**
         - /hwadmin/login
         - /ac/auth/admin/login
         - /ac/oauth/token
+
