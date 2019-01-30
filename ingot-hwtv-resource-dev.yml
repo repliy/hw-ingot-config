@@ -8,6 +8,10 @@ spring:
     default-property-inclusion: non_null
   datasource:
     url: jdbc:mysql://ingot-db-mysql:3306/hwtv_db?useUnicode=true&characterEncoding=UTF8&useSSL=false
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
 
 security:
   oauth2:
