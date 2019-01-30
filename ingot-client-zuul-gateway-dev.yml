@@ -4,10 +4,11 @@ spring:
       charset: UTF-8
       force: true
       enabled: true
-    servlet:
-      multipart:
-       max-file-size: 100MB
-       max-request-size: 100MB
+    multipart:
+      max-file-size: 100Mb
+  servlet:
+    multipart:
+      max-file-size: 100Mb
 
 zuul:
   add-host-header: true
