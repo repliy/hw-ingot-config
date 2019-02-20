@@ -23,6 +23,11 @@ mybatis:
   type-aliases-package: com.ingot.uc.model.domain
   mapper-locations: classpath*:mapper/*.xml,classpath*:sdk/mapper/*.xml,classpath:/mybatis-mapper/*Mapper.xml
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@ingot-eureka-node2:8001/eureka/,http://root:root@ingot-eureka-node2:8002/eureka/
+
 security:
   oauth2:
     client:
