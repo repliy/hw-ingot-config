@@ -23,7 +23,7 @@ security:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@ingot-eureka-node1:8001/eureka/,http://root:root@ingot-eureka-node2:8002/eureka/
+      defaultZone: http://root:root@ingot-eureka-node1:8001/eureka/,http://root:root@ingot-eureka-node2:8001/eureka/
 
 ingot:
   application:
