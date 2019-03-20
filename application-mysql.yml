@@ -14,8 +14,8 @@ spring:
         exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
       stat-view-servlet:
         allow:
-        login-username: admin
-        login-password: admin
+        login-username: '{cipher}AQBoqA6bsQ92LPaamXGybh1leuYIy6eyKd6hByqwxMNrTdOaIUNwJg5GBnLt/fPHjHafbBIMPYHN+3x/u4ZWiaIhiZuY7JVB94s0OmOaiNbV9sJFmFVjeFbe9rWKgwrOjGxOx5wwqTB2YSt2KAUakxMZ5FdU5Vdi2GDd566jTppllFvNHUwDGdTjSRMIDl/ElEN9U35uaN4sjyzAYxcjdgM0emZlQ/0ynQMUjJTvQ0DM90EA/5NMuyJBmbmZabZ330ynZWZhZbPWWust2Qc6wck9fncOu8Hb2kYnGYtv0DKSznLU7rZWSbhDi6HeK05cF8Yn/IBwAsL9EodaiTO2ubb2F3aMQagyetkUoHp9r55MEHw3am2fPluPNC/9jYnkz50='
+        login-password: '{cipher}AQBpVNJL4iY/LV/Ya9I8Axp4nNS3MT9RIj5aj6q9ezwOuWNMzp+4dhqQ9/EggdLpigi4u4zI0Zy+I2McfhFayyJGZI0+5ooviie29QQdgvbkj8VwNwjb2zAwmxVSThEluJYhuRv6+bgb4pvjwIR+6RXkodRxT/lHYKBnPeAJTynOZi9I4MtmBRdARbPOQqlZ9u+OCQ5U+/m63Kw4iG1XovOyLEG+FofJC6OpGC8RZLj1fxoljvAGVW22C0dCylKuuAJgKteW2mkIj2wtp8qDJyJk6c2247Z+ssNmDc94NTI/PiLDZdzVUNpUPl/bi10hUY/NmUjLo8v5WEoXJEajPoh4PMPI5/9pyV13njaTZ2cePkWLIacVzjZtOo/+oTPodAo='
       connection-init-sqls:
       - SET NAMES utf8mb4
 

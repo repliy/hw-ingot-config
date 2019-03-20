@@ -16,10 +16,8 @@ spring:
     time-zone: GMT+8
     default-property-inclusion: non_null
   rabbitmq:
-    host: ingot-mq-rabbit
-    port: 5672
-    username: guest
-    password: guest
+    host: ${RABBIT_MQ_HOST:ingot-mq-rabbit}
+    port: ${RABBIT_MQ_PORT:5672}
   redis:
     database: 1
     host: ${REDIS_HOST:ingot-db-redis}
@@ -54,7 +52,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 20000
 
 logging:
   level:
