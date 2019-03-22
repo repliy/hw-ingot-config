@@ -38,9 +38,6 @@ security:
       jwt:
         key-uri: http://ingot-auth-center:8050/oauth/token_key
 ingot:
-  swagger:
-    title: ${spring.application.name}
-    description: 华文电视后管
   job:
     xxl:
       admin:
