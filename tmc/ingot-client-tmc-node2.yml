@@ -1,0 +1,9 @@
+security:
+  oauth2:
+    client:
+      access-token-uri: http://ingot-auth-center:8052/oauth/token
+      user-authorization-uri: http://ingot-auth-center:8052/oauth/authorize
+    resource:
+      user-info-uri: http://ingot-auth-center:8052/user
+      jwt:
+        key-uri: http://ingot-auth-center:8052/oauth/token_key

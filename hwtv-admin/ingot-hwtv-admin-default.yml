@@ -1,4 +1,8 @@
 spring:
+  servlet:
+     multipart:
+      max-file-size: 100Mb
+      max-request-size: 100Mb
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
   jackson:
@@ -7,41 +11,42 @@ spring:
     time-zone: GMT+8
     default-property-inclusion: non_null
   datasource:
-    url: jdbc:mysql://ingot-db-mysql:3306/hw_ingot_uc_db?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    url: jdbc:mysql://ingot-db-mysql:3306/hwtv_db?useUnicode=true&characterEncoding=UTF8&useSSL=false
 
 mybatis:
-  type-aliases-package: com.ingot.uc.model.domain
-  mapper-locations: classpath*:mapper/*.xml,classpath*:sdk/mapper/*.xml
+  type-aliases-package: com.ingot.ha.model.domain
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+mapper:
+  not-empty: true
+  mappers: com.ingot.common.mybatis.MyMapper
+  identity: MYSQL
 
 security:
   oauth2:
     client:
       client-id: ${spring.application.name}
-      client-secret: V3T3545EGUDjNFbmON6P+Jd4PxH/MwyCt62NZj8Yx/s=
+      client-secret: ingotHwtvAdminSecret
       access-token-uri: http://ingot-auth-center:8050/oauth/token
       user-authorization-uri: http://ingot-auth-center:8050/oauth/authorize
     resource:
-      id: ingot-resource-uc
+      id: hwtv-admin-resource
       user-info-uri: http://ingot-auth-center:8050/user
       prefer-token-info: false
       jwt:
         key-uri: http://ingot-auth-center:8050/oauth/token_key
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://root:ocnt-123@ingot-eureka-node1:8001/eureka/,http://root:ocnt-123@ingot-eureka-node2:8001/eureka/
-
 ingot:
   application:
-    dataCenterId: 1
+    dataCenterId: 5
     machineId: 0
   oauth2:
     resource:
       permit:
-        - /token
-        - /test/auth
+       - /login
+       - /token
   job:
     xxl:
       admin:
-        addresses: http://ingot-task-manager-center-node1:8060,http://ingot-task-manager-center-node2:8060
+        addresses: http://${INGOT_TMC_HOST:ingot-task-manager-center}:8060
