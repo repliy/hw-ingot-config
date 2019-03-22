@@ -26,12 +26,6 @@ security:
       prefer-token-info: false
       jwt:
         key-uri: http://ingot-auth-center:8050/oauth/token_key
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://root:ocnt-123@ingot-eureka-node1:8001/eureka/,http://root:ocnt-123@ingot-eureka-node2:8001/eureka/
-
 ingot:
   application:
     dataCenterId: 7

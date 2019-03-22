@@ -4,6 +4,10 @@ spring:
       charset: UTF-8
       force: true
       enabled: true
+  servlet:
+     multipart:
+      max-file-size: 100Mb
+      max-request-size: 100Mb
 
 zuul:
   add-host-header: true
@@ -23,8 +27,8 @@ zuul:
         MaxAutoRetries: 1
         MaxAutoRetriesNextServer: 2
         OkToRetryOnAllOperations: false
-        ConnectTimeout: 20000
-        ReadTimeout: 20000
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
     uc-route:
       sensitiveHeaders:
       path: /uc/**
@@ -35,9 +39,32 @@ zuul:
         MaxAutoRetries: 1
         MaxAutoRetriesNextServer: 2
         OkToRetryOnAllOperations: false
-        ConnectTimeout: 20000
-        ReadTimeout: 20000
-
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
+    hwtv-admin:
+      sensitiveHeaders:
+      path: /hwadmin/**
+      service-id: ingot-hwtv-admin
+      ribbon:
+        eager-load:
+          enabled: true
+        MaxAutoRetries: 1
+        MaxAutoRetriesNextServer: 2
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
+    hwtv-app:
+      sensitiveHeaders:
+      path: /hwapp/**
+      service-id: ingot-hwtv-app
+      ribbon:
+        eager-load:
+          enabled: true
+        MaxAutoRetries: 1
+        MaxAutoRetriesNextServer: 2
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
 
 management:
   endpoint:
@@ -62,7 +89,7 @@ security:
   oauth2:
     client:
       client-id: ${spring.application.name}
-      client-secret: '{cipher}AQBAqCjGq97UVRkoVbd85OLd4oOTs3+Fr8phkWpG1pj0FH0p+4vcWAEsJoGm37kLID6+cEfn7tvS+el/LeIe3YjM0Cu4b1p/oD2jUEuLi2o3cPU5ZvcEhURQbZrde4Wn6J+6DUEhRBOJkjq50W7DqGZ6IJr7fkN+0Rtwl8sBIylcyy2ODTAgRVHLvanelqEx+pJFm3To3ZeO4VgbDIBaUTJuZvZ3KFLMNCnw2ojpuXjNv8folAn5gvX7AU7EBfK0iK9wOGg5vD7Si/TOdvvTIwCUPaYF7JfAQEXM/neD7tMhstFZLj+BIUWCkcdkRZMunIzdGMOgnss5+Rz4P/vO6FpO0ZVxAadUK09YjGOb8ONmvsSAYiE7wqOUqBCVYL8UrneOlpGhDNvw0M+aiNUMvPBUKYsWs6cQtf83AE5eg1ji+g=='
+      client-secret: yd31PYIr1ZT1Oi6bh/U4oZD1+kuUSk3LnGsUKu6LQHg=
       access-token-uri: http://ingot-auth-center:8050/oauth/token
       user-authorization-uri: http://ingot-auth-center:8050/oauth/authorize
     resource:
@@ -72,32 +99,12 @@ security:
       jwt:
         key-uri: http://ingot-auth-center:8050/oauth/token_key
 
-proxy:
-  auth:
-    routes:
-      ac-route: oauth2
-      uc-route: oauth2
-
-# swagger butler配置
-swagger:
-  butler:
-    api-docs-path: v2/api-docs
-    swagger-version: 2.0
-    auto-generate-from-zuul-routes: true
-    generate-routes: uc-route,ac-route
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:ocnt-123@ingot-eureka-node1:8001/eureka/,http://root:ocnt-123@ingot-eureka-node2:8001/eureka/
 
 ingot:
-  job:
-    xxl:
-      admin:
-        addresses: http://${INGOT_TMC_HOST:ingot-task-manager-center}:8060
-      executor:
-        appname: ${spring.application.name}
-        ip:
-        port: 9700
-        logpath: /data/ingot/logs/${spring.application.name}/jobhandler
-        logretentiondays: -1
-      accessToken: '{cipher}AQAAyCI7/2E40wP2e5RMuZ6pgAETmxvQjaGuLHMIFHynP2tDC8LCo4t7mlRVgU0h+s8Jbxbb+e7pEG9th/HeyPfNQ+GfZQSTn5cfLtHbJMMZYLN7yKOYJl7I+9rku3OiYyJideYU4BYG+EMU+5Xzq+3zfsY7HvsPAn561wo9kfwjPWnRlPprwDJJgptfMygbjmbFoUo/jeJ/GXojALNME76oSp6gxl3bqrRaTfCGYL5iPZNJbXTMFgC1IyNpvaa+DUa6WQ1KD3Dk4wM3pmfe+OUQuaEL7W8hoyinlWidOjrFOvu+bQO7241jMFByKDFwxx3i/EAHQInu4brvaryS52dLijAoZC59oZuCghcxWzmVrbrXiAAgSOd6ZSTuQtmevRjD8qeXhmIsVuPXNEcmMAOm'
   application:
     dataCenterId: 2
     machineId: 0
@@ -107,5 +114,12 @@ ingot:
         - /ac/auth/user/refreshToken
         - /ac/auth/code/**
         - /ac/auth/login
+        - /hwapp/**
+        - /hwadmin/login
         - /ac/auth/admin/login
-        - /ac/auth/admin/modifyPasswordByMobile
+        - /ac/oauth/token
+  job:
+    xxl:
+      admin:
+        addresses: http://ingot-task-manager-center-node1:8060,http://ingot-task-manager-center-node2:8060
+

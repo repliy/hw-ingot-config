@@ -17,17 +17,22 @@ spring:
     settings:
       number_format: 0.##########
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:ingot-db-mysql}:${MYSQL_PORT:3306}/ingot_tmc_db?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    url: jdbc:mysql://ingot-db-mysql:3306/hw_ingot_tmc_db?useUnicode=true&characterEncoding=UTF8&useSSL=false
 
 mybatis:
   type-aliases-package: com.ingot.uc.model.domain
   mapper-locations: classpath*:mapper/*.xml,classpath*:sdk/mapper/*.xml,classpath:/mybatis-mapper/*Mapper.xml
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:ocnt-123@ingot-eureka-node1:8001/eureka/,http://root:ocnt-123@ingot-eureka-node2:8001/eureka/
+
 security:
   oauth2:
     client:
       client-id: ${spring.application.name}
-      client-secret: '{cipher}AQBxB1eI6JrOmnv/bzpeZEej+dQxEz/+BST3MJ47yafiFKKfiVF4tqwUyv/syPdQGOIniB8qAqavHXsWJDO8OrckpeVb9iAzoCV+h+KaCFme78ELfkQNN7k+d6J2RrA1/h9eLARolAR/ytehx5m7lGNNQnPTlr/LKHOCugV6Q0HqehLAu3T3pNXgtpOM3sa+lpMcM/Bx1B79KJKYqhE6UbI0I2RmyhfCoAaCUc8y/54sFsLGIxabtufMwM0zutgkYAI+CdveJUdJAA3JxCu8JV/DArYUcVY8IwEMa+5aqWL+Jw6TBdldyW5UDnI2rF2MX8oHj5EVe1NBjurZ3YZ77k6C55rqklNnl4LKRpJEvWOhd9FzkCoS/Yax8fKpgBMxrRmEmMvKsgvwDpbcb+F6HnTueLVoDZ1QpaLSh3L9yu/qOQ=='
+      client-secret: yPTYMVkD1a+zvuusi1rV82Ui2bPQ7T0Lu39mhAsVhvA=
       access-token-uri: http://ingot-auth-center:8050/oauth/token
       user-authorization-uri: http://ingot-auth-center:8050/oauth/authorize
     resource:

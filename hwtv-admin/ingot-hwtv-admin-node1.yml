@@ -1,8 +1,0 @@
-ingot:
-  application:
-    dataCenterId: 5
-    machineId: 0
-  job:
-    xxl:
-      admin:
-        addresses: http://ingot-task-manager-center-node1:8060,http://ingot-task-manager-center-node2:8060
