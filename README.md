@@ -1,2 +1,2 @@
-# hw-ingot-config
-hw-ingot-config
+# ingot-config
+ingot config
