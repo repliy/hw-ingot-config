@@ -52,7 +52,7 @@ ingot:
       ipModelThreshold: 3
       length: 4
       expireIn: 60
-      url:
+      url: /auth/admin/login
     email:
       expireIn: 86400
   application:
