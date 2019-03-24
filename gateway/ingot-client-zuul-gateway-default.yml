@@ -129,6 +129,7 @@ ingot:
       permit:
         - /ac/auth/user/refreshToken
         - /ac/auth/code/**
+        - /ac/auth/token
         - /ac/auth/login
         - /ac/auth/admin/login
         - /ac/auth/admin/modifyPasswordByMobile
