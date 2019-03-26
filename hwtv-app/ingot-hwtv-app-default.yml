@@ -50,6 +50,7 @@ ingot:
         - /movie/**
         - /main/**
         - /resource/**
+        - /user/thirdparty/login
       userPermit:
         - /update/**
         - /detail/**
@@ -57,3 +58,4 @@ ingot:
         - /movie/**
         - /main/**
         - /resource/**
+        - /user/thirdparty/login
