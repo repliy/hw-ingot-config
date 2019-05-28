@@ -132,4 +132,10 @@ ingot:
         - /ac/auth/login
         - /ac/auth/admin/login
         - /ac/auth/admin/modifyPasswordByMobile
-        - /hwapp/**
+        - /hwapp/update/**
+        - /hwapp/detail/**
+        - /hwapp/live/**
+        - /hwapp/movie/**
+        - /hwapp/main/**
+        - /hwapp/resource/**
+        - /hwapp/user/thirdparty/login
