@@ -49,6 +49,7 @@ ingot:
         - /live/**
         - /movie/**
         - /main/**
+        - /sms/**
         - /resource/**
         - /user/thirdparty/login
       userPermit:
@@ -57,5 +58,6 @@ ingot:
         - /live/**
         - /movie/**
         - /main/**
+        - /sms/**
         - /resource/**
         - /user/thirdparty/login

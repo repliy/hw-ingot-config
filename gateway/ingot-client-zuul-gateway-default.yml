@@ -137,5 +137,6 @@ ingot:
         - /hwapp/live/**
         - /hwapp/movie/**
         - /hwapp/main/**
+        - /hwapp/sms/**
         - /hwapp/resource/**
         - /hwapp/user/thirdparty/login
