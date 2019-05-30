@@ -52,6 +52,7 @@ ingot:
         - /sms/**
         - /resource/**
         - /user/thirdparty/login
+        - /user/area
       userPermit:
         - /update/**
         - /detail/**
@@ -61,3 +62,4 @@ ingot:
         - /sms/**
         - /resource/**
         - /user/thirdparty/login
+        - /user/area

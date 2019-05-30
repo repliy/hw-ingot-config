@@ -140,3 +140,4 @@ ingot:
         - /hwapp/sms/**
         - /hwapp/resource/**
         - /hwapp/user/thirdparty/login
+        - /user/area
