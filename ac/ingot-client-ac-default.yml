@@ -68,4 +68,3 @@ ingot:
       - /auth/user/refreshToken
       - /auth/code/**
       - /auth/admin/modifyPasswordByMobile
-      - /auth/login
