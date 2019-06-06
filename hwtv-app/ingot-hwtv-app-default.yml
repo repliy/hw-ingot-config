@@ -53,6 +53,7 @@ ingot:
         - /resource/**
         - /user/thirdparty/login
         - /user/area
+        - /pay/ali/notify
       userPermit:
         - /update/**
         - /detail/**
@@ -63,3 +64,4 @@ ingot:
         - /resource/**
         - /user/thirdparty/login
         - /user/area
+        - /pay/ali/notify

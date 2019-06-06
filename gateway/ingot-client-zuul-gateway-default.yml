@@ -141,3 +141,4 @@ ingot:
         - /hwapp/resource/**
         - /hwapp/user/thirdparty/login
         - /hwapp/user/area
+        - /hwapp/pay/ali/notify
