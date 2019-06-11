@@ -54,6 +54,7 @@ ingot:
         - /user/thirdparty/login
         - /user/area
         - /pay/ali/notify
+        - /pay/wx/notify
       userPermit:
         - /update/**
         - /detail/**
