@@ -60,7 +60,7 @@ ingot:
     machineId: 0
   oauth2:
     adminAuthType: standard
-    appAuthType: standard
+    appAuthType: unique
     tokenStore: jwt
     rsaSecret: '{cipher}AQBIqqJOis4zCLsRPnEuz3eaoucZv018QYmYZrQAnFOIa1ML4hUoqJKcfjRT4OGrR+pwOlO5fngd/+kwqyGg9lPbTb/916tDwtrGhSUrwH6GRhl9zC9FNkzDVlCbPduenfcrX8bW/gAJ8UhtjBi2/ECSRmZYVT8Y5pM0NSulyrNtsxKJcEl7zSFL5kdrcnsiUpUfh+pyyCN35eioaphgYq2g1TDuCgVg+Cb6XIlQS2/HzoPcSTVB1Wm054x4e3IeyCkJ9tIXIqjgrA8x3xygSdg8mybx1tpg82fIWUJkMoQJv585SerZBZzcAe3vJX3q/2NWdp3daUEBxtcQBgfSTQ7Hp/mq/rxPdQ6PXptBzVlkObmJy06F+LqYZK+F5V6Pm5VzD5LyAsXjAJGO7VWTBUGP'
     resource:
