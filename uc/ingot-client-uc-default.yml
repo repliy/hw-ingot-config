@@ -48,4 +48,3 @@ ingot:
   oauth2:
     resource:
       permit:
-        - /token/get
