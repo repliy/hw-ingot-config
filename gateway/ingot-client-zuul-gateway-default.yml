@@ -73,10 +73,6 @@ management:
 
 #请求和响应GZIP压缩支持
 feign:
-  httpclient:
-    enabled: false
-  okhttp:
-    enabled: true
   compression:
     request:
       enabled: true
@@ -137,4 +133,14 @@ ingot:
         - /ac/auth/login
         - /ac/auth/admin/login
         - /ac/auth/admin/modifyPasswordByMobile
-        - /hwapp/**
+        - /hwapp/update/**
+        - /hwapp/detail/**
+        - /hwapp/live/**
+        - /hwapp/movie/**
+        - /hwapp/main/**
+        - /hwapp/sms/**
+        - /hwapp/resource/**
+        - /hwapp/user/thirdparty/login
+        - /hwapp/user/area
+        - /hwapp/pay/ali/notify
+        - /hwapp/pay/wx/notify

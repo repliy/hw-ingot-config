@@ -49,11 +49,21 @@ ingot:
         - /live/**
         - /movie/**
         - /main/**
+        - /sms/**
         - /resource/**
+        - /user/thirdparty/login
+        - /user/area
+        - /pay/ali/notify
+        - /pay/wx/notify
       userPermit:
         - /update/**
         - /detail/**
         - /live/**
         - /movie/**
         - /main/**
+        - /sms/**
         - /resource/**
+        - /user/thirdparty/login
+        - /user/area
+        - /pay/ali/notify
+        - /pay/wx/notify
