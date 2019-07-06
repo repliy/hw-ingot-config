@@ -124,6 +124,7 @@ ingot:
     resource:
       permit:
         - /ac/auth/user/refreshToken
+        - /ac/oauth/token
         - /ac/auth/code/**
         - /ac/auth/login
         - /ac/auth/admin/login
