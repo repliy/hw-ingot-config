@@ -63,7 +63,7 @@ zuul:
         ReadTimeout: 20000
     hwtv-resource:
       sensitiveHeaders:
-      path: /hwtv-admin/resource/**
+      path: /resource/**
       service-id: ingot-hwtv-app
       ribbon:
         eager-load:
