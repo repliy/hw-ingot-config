@@ -61,7 +61,18 @@ zuul:
         OkToRetryOnAllOperations: false
         ConnectTimeout: 20000
         ReadTimeout: 20000
-
+    hwtv-resource:
+      sensitiveHeaders:
+      path: /hwtv-admin/resource/**
+      service-id: ingot-hwtv-app
+      ribbon:
+        eager-load:
+          enabled: true
+        MaxAutoRetries: 1
+        MaxAutoRetriesNextServer: 2
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 20000
+        ReadTimeout: 20000
 management:
   endpoint:
     health:
