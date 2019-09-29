@@ -30,3 +30,7 @@ ingot:
   application:
     dataCenterId: 7
     machineId: 0
+  oauth2:
+    resource:
+      permit:
+        - /**
