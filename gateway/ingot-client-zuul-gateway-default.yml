@@ -63,7 +63,7 @@ zuul:
         ReadTimeout: 20000
     hwtv-resource:
       sensitiveHeaders:
-      path: /hwresource/**
+      path: /resource/**
       service-id: ingot-hwtv-resource
       ribbon:
         eager-load:
@@ -151,4 +151,4 @@ ingot:
         - /hwapp/user/area
         - /hwapp/pay/ali/notify
         - /hwapp/pay/wx/notify
-        - /hwresource/**
+        - /resource/**
