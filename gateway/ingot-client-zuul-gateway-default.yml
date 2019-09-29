@@ -64,7 +64,7 @@ zuul:
     hwtv-resource:
       sensitiveHeaders:
       path: /resource/**
-      service-id: ingot-hwtv-app
+      service-id: ingot-hwtv-resource
       ribbon:
         eager-load:
           enabled: true
@@ -151,3 +151,4 @@ ingot:
         - /hwapp/user/area
         - /hwapp/pay/ali/notify
         - /hwapp/pay/wx/notify
+        - /resource/**
