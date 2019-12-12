@@ -151,4 +151,5 @@ ingot:
         - /hwapp/user/area
         - /hwapp/pay/ali/notify
         - /hwapp/pay/wx/notify
+        - /hwapp/pay/qr/**
         - /resource/**
