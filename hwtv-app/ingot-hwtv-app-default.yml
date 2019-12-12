@@ -55,7 +55,7 @@ ingot:
         - /user/area
         - /pay/ali/notify
         - /pay/wx/notify
-        - /pay/qr/**
+        - /qrpay/**
       userPermit:
         - /update/**
         - /detail/**
@@ -68,4 +68,4 @@ ingot:
         - /user/area
         - /pay/ali/notify
         - /pay/wx/notify
-        - /pay/qr/**
+        - /qrpay/**
