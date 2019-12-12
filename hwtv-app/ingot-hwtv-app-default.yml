@@ -5,11 +5,21 @@ spring:
       max-request-size: 100Mb
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
+    static-path-pattern: /static/**
   jackson:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non_null
+  resources:
+    static-locations: classpath:/static/
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
   datasource:
     url: jdbc:mysql://ingot-db-mysql:3306/hwtv_db?useUnicode=true&characterEncoding=UTF8&useSSL=false
 
