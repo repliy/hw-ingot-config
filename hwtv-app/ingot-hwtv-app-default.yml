@@ -66,6 +66,7 @@ ingot:
         - /pay/ali/notify
         - /pay/wx/notify
         - /qrpay/**
+        - /static/**
       userPermit:
         - /update/**
         - /detail/**
@@ -79,3 +80,4 @@ ingot:
         - /pay/ali/notify
         - /pay/wx/notify
         - /qrpay/**
+        - /static/**
